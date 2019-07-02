@@ -6,13 +6,7 @@
     </header>
     <main>
       <section id="new">
-        <input
-          autofocus
-          type="text"
-          placeholder="Something need doing?"
-          v-model="newTask"
-          @keyup.enter="addTask"
-        />
+        <new-task @add-task="addTask($event)"></new-task>
       </section>
       <task-list
         :tasks="this.tasks"
@@ -38,17 +32,15 @@ import "@/app.sass";
 })
 export default class App extends Vue {
   protected currentId = 1;
-  protected newTask = "";
   protected tasks: Task[] = [];
 
-  protected addTask() {
+  protected addTask(task: string) {
     this.tasks.push({
       id: this.currentId,
-      title: this.newTask.trim(),
+      title: task.trim(),
       completed: false,
     });
     this.currentId++;
-    this.newTask = "";
   }
 
   protected completeTask(task: Task) {
