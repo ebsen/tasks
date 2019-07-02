@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <h1>tasks</h1>
-      <p>a really crummy todo app</p>
+      <p>a crummy little todo app</p>
     </header>
     <main>
       <section id="new">

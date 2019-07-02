@@ -1,5 +1,7 @@
 # tasks
 
+A really crummy todo app to teach myself a little Vue.js
+
 ## Project setup
 ```
 yarn install
