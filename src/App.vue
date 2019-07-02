@@ -28,6 +28,7 @@ import { Component, Vue, Watch } from "vue-property-decorator";
 import Task from "@/Task";
 import NewTask from "@/components/NewTask.vue";
 import TaskList from "@/components/TaskList.vue";
+import "@/app.sass";
 
 @Component({
   components: {
@@ -65,27 +66,3 @@ export default class App extends Vue {
   // }
 }
 </script>
-
-<style lang="sass">
-  #app
-    max-width: 16em
-    margin: 0 auto
-  body
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-  main
-    border-top: 1px dotted grey
-    padding: 1em 0
-  header h1
-    margin-bottom: 0
-  li
-    list-style-type: none
-  ul
-    padding-left: 0
-  .completed
-    label
-      text-decoration: line-through
-  .delete
-    color: #E7040F
-    font-weight: bold
-    float: right
-</style>

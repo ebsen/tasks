@@ -1,0 +1,44 @@
+@import url('https://rsms.me/inter/inter.css')
+html
+  font-family: 'Inter', sans-serif
+@supports (font-variation-settings: normal)
+  html
+    font-family: 'Inter var', sans-serif
+
+html
+  box-sizing: border-box
+*, *:before, *:after
+  box-sizing: inherit
+
+#app
+  max-width: 16em
+  margin: 0 auto
+
+main
+  padding: 1em 0
+
+header h1
+  margin-bottom: 0
+
+#new input
+  background: #E8FDF5
+  padding: .5em
+  width: 100%
+  &::placeholder
+    color: black
+
+li
+  list-style-type: none
+
+ul
+  padding-left: 0
+
+.completed
+  label
+    text-decoration: line-through
+
+.delete
+  color: #E7040F
+  cursor: pointer
+  font-weight: bold
+  float: right

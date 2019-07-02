@@ -1,10 +1,10 @@
 <template>
   <article id="tasks">
     <ul>
-      <li v-for="task in tasks" :class="{completed: task.completed}" :key="task.id">
+      <li v-for="task in tasks" :class="{ completed: task.completed }" :key="task.id">
         <input :id="task.id" name="done" type="checkbox" @click="$emit('complete-task', task)" />
         <label>{{ task.title }}</label>
-        <button class="delete" @click="$emit('delete-task', task)">&times;</button>
+        <span class="delete" @click="$emit('delete-task', task)">&times;</span>
       </li>
     </ul>
     <footer>{{ this.remainingTasks }}</footer>
